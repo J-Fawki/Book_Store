@@ -20,15 +20,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Books book = new Books("Human_Resources",2,"25_August_2022", "Basma-Yasser");
+//        Books book = new Books("Human_Resources",2,"25_August_2022", "Basma-Yasser");
 
         Users User = new Users("Ahmed", "amanda",12,"Iam123");
         Users User1 = new Users("basma", "basm",12,"Iam167");
 
         Database db = new Database(this);
 
-        db.AddBook(book);
-        System.out.println("Book is added successfully");
+//        db.AddBook(book);
+//        System.out.println("Book is added successfully");
 
         db.AddUser(User1);
         db.AddUser(User);
@@ -57,15 +57,18 @@ public class MainActivity extends AppCompatActivity {
                 EditText Username = (EditText) findViewById(R.id.login_Username);
                 EditText Password = (EditText) findViewById(R.id.login_password);
 
-                if(!(Username.getText().toString().equals("")) && !(Password.getText().toString().equals(""))){
+                if(!(Username.getText().toString().equals("")) && !(Password.getText().toString().equals("")))
+                {
 
                     boolean logincheck = db.Check(Username.getText().toString(), Password.getText().toString());
-                    if(logincheck) {
+                    if(logincheck)
+                    {
                         Toast.makeText(getApplicationContext(), "Welcome to our Book Store", Toast.LENGTH_LONG).show();
                         Intent i = new Intent(MainActivity.this, Library.class);
                         startActivity(i);
                     }
-                    else{
+                    else
+                    {
                         Toast.makeText(getApplicationContext(), "Sorry, invalid username or password", Toast.LENGTH_LONG).show();
 
                     }
@@ -77,6 +80,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
 
     }
 }

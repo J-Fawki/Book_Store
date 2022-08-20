@@ -4,15 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:textAlignment="viewStart"
     tools:context=".MainActivity2">
 
     <EditText
         android:id="@+id/NameTxt"
         android:layout_width="0dp"
-        android:layout_height="44dp"
+        android:layout_height="48dp"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="155dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="64dp"
         android:ems="10"
         android:hint="Name"
         android:inputType="textPersonName"
@@ -23,8 +24,8 @@
     <EditText
         android:id="@+id/Age"
         android:layout_width="96dp"
-        android:layout_height="43dp"
-        android:layout_marginBottom="50dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="64dp"
         android:ems="10"
         android:hint="Age"
         android:inputType="number"
@@ -38,10 +39,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="80dp"
-        android:layout_marginBottom="60dp"
+        android:layout_marginBottom="70dp"
         android:ems="10"
         android:hint="Username"
         android:inputType="textPersonName"
+        android:minHeight="48dp"
         app:layout_constraintBottom_toTopOf="@+id/AccPass"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -52,10 +54,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="80dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="60dp"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
+        android:minHeight="48dp"
         app:layout_constraintBottom_toTopOf="@+id/ConfPass"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -66,10 +69,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="80dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="64dp"
         android:ems="10"
         android:hint="Confirm Password"
         android:inputType="textPassword"
+        android:minHeight="48dp"
         app:layout_constraintBottom_toTopOf="@+id/Add_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -78,9 +82,23 @@
         android:id="@+id/Add_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="80dp"
         android:text="Add Account"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="1dp"
+        android:background="@color/purple_200"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

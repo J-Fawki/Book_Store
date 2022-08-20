@@ -23,33 +23,33 @@ public class Database extends SQLiteOpenHelper {
                 " Username TEXT, Age INTEGER, Password TEXT)";
         sqLiteDatabase.execSQL(UTableCreation);
 
-        String BTableCreation = " CREATE TABLE Books ( ID INTEGER PRIMARY KEY, Book_Name TEXT ," +
-                " Category INTEGER, Prod_Date TEXT, Author TEXT)";
-        sqLiteDatabase.execSQL(BTableCreation);
+//        String BTableCreation = " CREATE TABLE Books ( ID INTEGER PRIMARY KEY, Book_Name TEXT ," +
+//                " Category INTEGER, Prod_Date TEXT, Author TEXT)";
+//        sqLiteDatabase.execSQL(BTableCreation);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
 
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS Users");
-        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS Books");
+//        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS Books");
         onCreate(sqLiteDatabase);
     }
 
     SQLiteDatabase dbase;
-    public void AddBook(Books book){
-
-        dbase = this.getWritableDatabase();
-        ContentValues value = new ContentValues();
-        value.put("Book_Name", book.getBook_Name());
-        value.put("Category", book.getCategory());
-        value.put("Prod_Date", book.getProd_Date());
-        value.put("Author", book.getAuthor());
-
-        dbase.insert("Books", null , value);
-        dbase.close();
-
-    }
+//    public void AddBook(Books book){
+//
+//        dbase = this.getWritableDatabase();
+//        ContentValues value = new ContentValues();
+//        value.put("Book_Name", book.getBook_Name());
+//        value.put("Category", book.getCategory());
+//        value.put("Prod_Date", book.getProd_Date());
+//        value.put("Author", book.getAuthor());
+//
+//        dbase.insert("Books", null , value);
+//        dbase.close();
+//
+//    }
 
     public void AddUser(Users user){
 
